@@ -1,0 +1,123 @@
+package teste_pratico;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		// implementação 1:
+		
+		Scanner ler = new Scanner(System.in);
+
+		
+		// algoritimo 2
+		
+		float l = 0;
+		float c = 0;
+		
+		System.out.println("Digite a largura da parede em metros: ");
+		l = ler.nextFloat();
+		
+		System.out.println("Digite o comprimento da parede em metros: ");
+		c = ler.nextInt();
+		
+		float metrosQuadrados = l * c;
+		
+		float qtdMl = 300 * metrosQuadrados;
+		
+		int qtdLatas = Math.round(qtdMl / 2000);
+		
+		System.out.println("A quantidade de latas total é: " + qtdLatas + " Latas de tinta");
+		
+		// Algoritimo 3
+		
+		System.out.println("Qual o formato do terreno:\n");
+		System.out.println("1 - Retangular\n");
+		System.out.println("2 - Trapezoidal\n");
+		System.out.println("Digite uma opcao: \n");
+
+		int opcao = ler.nextInt();
+
+		 if(opcao == 1) {
+			 System.out.println("Digite a largura do terreno : \n");
+			 System.out.println("Digite uma opcao: \n");
+			 float base = ler.nextFloat();
+			 
+			 System.out.println("Digite o comprimento do terreno: \n");
+			 System.out.println("Digite uma opcao: \n");
+			 float largura = ler.nextFloat();
+			
+			 float area = base * largura;
+			 System.out.println("A áre do seu terreno é de " + area + " metros quadrados");
+		 }
+		 else if(opcao == 2) {
+			 System.out.println("Digite o tamanho da largura menor: \n");
+			 System.out.println("Digite uma opcao: \n");
+			 float larguraMenor = ler.nextFloat();
+			 
+			 System.out.println("Digite o tamanho da largura maior: \n");
+			 System.out.println("Digite uma opcao: \n");
+			 float larguraMaior = ler.nextFloat();
+			 
+			 System.out.println("Digite a altura do terreno: \n");
+			 System.out.println("Digite uma opcao: \n");
+			 float altura = ler.nextFloat();
+			 
+			 float area = ((larguraMaior + larguraMenor) * altura) /2;
+			 System.out.println("A áre do seu terreno é de " + area + " metros quadrados");
+		 }else {
+			 System.out.println("Opção inválida!");
+		 }
+			 
+	
+		 // algoritimo 4
+		 
+		 float valorProduto = 0;
+
+		 System.out.println("Digite o valor do produto: \n");
+		 valorProduto = ler.nextFloat();
+		 
+		 if(valorProduto < 50) {
+			 valorProduto = valorProduto + ((valorProduto * 45) / 100);
+			 System.out.println("Oproduto deve ser vendido no valor de: R$ " + Math.round(valorProduto)+ " percentual de 45% aplicado");
+		 }
+		 else {
+			 valorProduto = valorProduto + ((valorProduto * 30) / 100);
+			 System.out.println("Oproduto deve ser vendido no valor de: R$ " + Math.round(valorProduto) + " percentual de 30% aplicado");
+		 }
+		 
+		 
+		// algoritimo 5
+		 
+		 int n1, n2, n3;
+		 
+		 System.out.println("Digite o primeiro valor: ");
+		 n1 = ler.nextInt();
+		 
+		 System.out.println("Digite o primeiro valor: ");
+		 n2 = ler.nextInt();
+		 
+		 System.out.println("Digite o primeiro valor: ");
+		 n3 = ler.nextInt();
+		 
+		 if((n1 + n2) == n3) {
+			 System.out.println("A soma do primeiro número digitado com o segundo resulta no valor do terceiro número digitado: " + n3);
+		 }
+		 else {
+			 System.out.println("A soma dos dois primeiros números digitados não correspende ao valor do terceiro.");
+		 }
+		
+		
+		// Algoritimo 6
+		System.out.println("Digite o número que deseja verificar a tabuada: ");
+		int n = ler.nextInt();
+		
+		for (int i = 1; i <= 10; i++) {
+			System.out.println(n +"x" + i + "=" + n*i);
+		}
+		
+		
+	}
+
+}
